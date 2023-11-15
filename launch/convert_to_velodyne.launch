@@ -1,6 +1,6 @@
 <launch>
 	<arg name = "vehicle_frd_flu" default="base_link_frd"/> 
-	<arg name = "airsim_config" default="/home/fyandun/Documents/AirSim/settings.json"/> 
+	<arg name = "airsim_config" default="$(find rs_to_velodyne)/config/settings_airsim.json"/> 
 	<node pkg="rs_to_velodyne" type="airsim_velodyne.py" name="rs_to_velodyne" output="screen" args="$(arg vehicle_frd_flu) $(arg airsim_config)" />
 
 </launch>
